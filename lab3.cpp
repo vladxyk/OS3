@@ -44,11 +44,13 @@ int procFone(char *name){
     setsid();
     cout << "ppid: " << getppid() << endl;
     cout << "pid: " << getpid() << endl;
-    execv(path[2], path);
-    _exit (EXIT_FAILURE);
-    //kill(getppid(), SIGTERM);
-  default:
-    wait(&rv);
+    chdir("/");
+    close(STDIN_FILENO);
+    close(STDOUT_FILENO);
+    close(STDERR_FILENO);
+    while(1){
+      sleep(20);
+    }
   }
   return 0;
 }
