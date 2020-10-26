@@ -19,7 +19,15 @@ void help(){
   cout << "-rmf: remove a file" << endl;
   cout << "-ssf: show size of file" << endl;
   cout << "-saf: show all files in directory" << endl;
-  cout << "-sap: show all processes" << endl << endl;
+  cout << "-sap: show all processes" << endl;
+  cout << "-p: spawn a process" << endl;
+  cout << "-pf: spawn a daemon" << endl;
+  cout << "-ssig: send process" << endl;
+  cout << "-rsig: receive process" << endl << endl;
+  cout << "PROJECT DESCRIPTION: " << endl << "Working with the file system" << endl << endl;
+  cout << "EXAMPLES OF STARTING: " << endl;
+  cout << "./oslab3 -cf from_file to_file" << endl;
+  cout << "./oslab3 -p pathname*" << endl;
   cout << "PROJECT DESCRIPTION: " << endl << "Working with the file system" << endl << endl;
   cout << "EXAMPLES OF STARTING: " << endl << "./oslab2 -cf from_file to_file" << endl;
 }
