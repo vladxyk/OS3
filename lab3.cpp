@@ -70,11 +70,13 @@ int recvsig()
   return 0;
 }
 
-int sendsig(char *name){
+int sendsig(){
   int signum;
+  pid_t pid;
+  cout << "enter pid" << endl;
+  cin >> pid;
   cout << "enter signum" << endl;
   cin >> signum;
-  pid_t pid = getpid();
   if (kill(pid, signum) == -1)
     return 1;
   return 0;
@@ -126,6 +128,6 @@ int main(int argc, char *argv[]){
   }
 
   if (string(argv[1]) == "-ssig"){
-    sendsig(argv[2]);
+    sendsig();
   }
 }
