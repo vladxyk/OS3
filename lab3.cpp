@@ -56,17 +56,15 @@ int procFone(char *name){
 }
 
 
-void sighandler(int signum) 
-{ 
+void sighandler(int signum){ 
     cout << "Signal received successfully" << endl; 
 }
 
-int recvsig() 
-{
+int recvsig(){
   int sigmun;
   cin >> sigmun;
 
-  if (signal(sigmun, sighandler) == SIG_ERR);
+  if (signal(sigmun, sighandler) == SIG_ERR)
     return 1; 
       
   return 0;
